@@ -1,7 +1,16 @@
 aid: bolt-threads
 name: Bolt Threads
-description: 'Bolt Threads is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Bolt Threads, Inc. was a San Francisco Bay Area biomaterials company founded in 2009 to
+  engineer protein- and mycelium-based materials. It is best known for Microsilk, a
+  bioengineered spider-silk fiber; Mylo, a mycelium-derived leather alternative developed
+  with partners including adidas, Kering, Lululemon, Patagonia and Stella McCartney; and
+  b-silk protein, a silk-protein ingredient for beauty and personal care. The company went
+  public on Nasdaq in August 2024 via a SPAC business combination under the ticker BSLK,
+  halted Mylo production, was suspended from Nasdaq in January 2026, and now trades OTC
+  Pink while deregistering with the SEC. Its website serves only a notice that the company
+  is no longer operating. Bolt Threads was a materials manufacturer, not a software vendor,
+  and never operated a developer program, public API, SDK, or machine-readable specification.
 url: https://raw.githubusercontent.com/api-evangelist/bolt-threads/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,13 @@ created: '2026-08-08'
 modified: '2026-08-08'
 tags:
 - Company
+- Biomaterials
+- Biotechnology
+- Materials Science
+- Sustainability
+- Personal Care
+- Textiles
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +36,33 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://boltthreads.com/
+- type: GitHubOrganization
+  url: https://github.com/boltthreads
+- type: SecondaryMarket
   url: https://forgeglobal.com/bolt-threads_stock/
+x-enrichment:
+  date: '2026-08-08'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    boltthreads.com now serves a single 1.4KB wind-down page reading "The Company is no
+    longer operating" with a creditor-contact email at vlpc.com; api./developer./docs.
+    subdomains do not resolve in DNS, and the boltthreads GitHub org holds 17 repositories
+    that are all forks of third-party Ruby/JS open source, last pushed in 2020.
+  evidence:
+  - url: https://boltthreads.com/
+    status: 200
+  - url: https://boltthreads.com/developers
+    status: 404
+  - url: https://boltthreads.com/openapi.json
+    status: 404
+  - url: https://boltthreads.com/.well-known/agent-card.json
+    status: 404
+  - url: https://api.boltthreads.com/
+    status: 0
+  checked: '2026-08-08'
